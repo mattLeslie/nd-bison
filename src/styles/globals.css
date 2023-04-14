@@ -1,0 +1,17 @@
+/* Other global styles such as 'html, body' etc... */
+
+#__next {
+    height: 100vh;
+  }
+
+  /* Other global styles such as 'html, body' etc... */
+
+html, body {
+    height: 100vh;
+    background-color: #111016;
+  }
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
