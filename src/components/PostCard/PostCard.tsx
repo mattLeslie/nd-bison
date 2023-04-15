@@ -12,7 +12,7 @@ type PostCardProps = {
   
   const PostCard = (props: PostCardProps) => {
     return (
-      <div className='w-[100%] mb-10 hover:-translate-y-4 z-10 hover:scale-110 transition delay-50 group/card'>
+      <div className='w-[100%] mb-10  z-10 transition-all delay-50 hover:-translate-y-5 hover:scale-110 group/card cursor-pointer'>
         <div className="flex flex-col">
             <div className="flex justify-center w-[100%]">
               <div className="relative w-[90%] h-44 rounded-2xl overflow-hidden flex items-center">

@@ -8,7 +8,7 @@ type NavButtonProps = {
 const NavButton = (props: NavButtonProps) => {
   return (
     <div className="mx-2 md:mx-8 lg:mx-16">
-        <button className="hover:text-cyan-500 hover:delay-50 transition duration-300">
+        <button className="hover:scale-105 hover:text-cyan-500 hover:delay-50 transition duration-300">
             {props.name}
         </button>
     </div>
