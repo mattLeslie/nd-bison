@@ -2,8 +2,9 @@ import { Footer } from "@/components/Footer";
 import { GridFrame } from "@/components/GridFrame";
 import { Header } from "@/components/Header";
 import { PostCard } from "@/components/PostCard";
+import { SiteDescriptor } from "@/components/SiteDescriptor";
 import { TitleCard } from "@/components/TitleCard";
-import Image from "next/image";
+import { useRef } from "react";
 
 const elementList = [
 <PostCard pText="Title" sText="subtext" date="April 14, 2023" imgUri="/assets/images/st_helens.jpg"/>,
@@ -27,29 +28,27 @@ const elementList = [
 <PostCard pText="Title" sText="subtext" date="April 14, 2023" imgUri="/assets/images/st_helens.jpg"/>
 ]
 
-const LandingHome = () => {
+const Home = () => {
+
+  const scrollToRef = useRef<any>(null);
+
   return (
-    <div className="h-screen relative no-scrollbar">
-        <div className="w-[100%] max-h-[20%]">
-          <Image
-            src='/assets/images/helens_banner.jpg'
-            width="0"
-            height="0"
-            sizes="100vw"
-            alt="banner"
-            style={{ width: '100%', height: '100%' }}
-            className="object-none"
-          />
-        </div>
+    <div className="relative no-scrollbar">
+        <TitleCard pText="Site Title" sText="Description"/>
         <Header/>
-        {/* <TitleCard pText="Matt's World" sText="I'm just living in it"/> */}
-        <div className="flex justify-center">
-         <div className="w-[90%] text-white pt-4 font-bold text-xl">Feed</div>
+        <SiteDescriptor/>
+        <div ref={scrollToRef} className="mt-4 mb-4 z-60 text-white font-bold text-xl flex justify-center">
+          <div className="w-[90%] text-center flex justify-center">
+            <p className="text-center text-2xl">
+              Feed
+            </p>
+          </div>
+
         </div>
-        <GridFrame elementList={elementList}/>
+        <GridFrame itemsPerPage={9} scrollToRef={scrollToRef} elementList={elementList}/>
         <Footer/>
     </div>
   );
 };
 
-export default LandingHome;
+export default Home;

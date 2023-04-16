@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 type TitleCardProps = {
   pText: string;
   sText: string;
@@ -5,10 +7,13 @@ type TitleCardProps = {
 
 const TitleCard = (props: TitleCardProps) => {
   return (
-    <div className='h-[27.5%] w-[100%] text-white bg-[#1a1a1f] px-8 flex justify-between items-center select-none mb-8'>
-        <div className="flex flex-col">
-          <p className="text-4xl mb-8 font-bold">{props.pText}</p>
-          <p className="text-xl text-gray-400">{props.sText}</p>
+    <div className='h-auto shadow-2xl w-[100%] text-white bg-transparent flex justify-between select-none'>
+        <div className="block relative">
+            <img 
+            alt="name" 
+            src="/assets/images/helens_banner.jpg" 
+            className="w-[100% h-[100%] object-cover" 
+            />
         </div>
     </div>
   );
