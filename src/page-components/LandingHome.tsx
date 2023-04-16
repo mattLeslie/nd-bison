@@ -3,7 +3,7 @@ import { GridFrame } from "@/components/GridFrame";
 import { Header } from "@/components/Header";
 import { PostCard } from "@/components/PostCard";
 import { TitleCard } from "@/components/TitleCard";
-
+import Image from "next/image";
 
 const elementList = [
 <PostCard pText="Title" sText="subtext" date="April 14, 2023" imgUri="/assets/images/st_helens.jpg"/>,
@@ -30,8 +30,19 @@ const elementList = [
 const LandingHome = () => {
   return (
     <div className="h-screen relative no-scrollbar">
+        <div className="w-[100%] max-h-[20%]">
+          <Image
+            src='/assets/images/helens_banner.jpg'
+            width="0"
+            height="0"
+            sizes="100vw"
+            alt="banner"
+            style={{ width: '100%', height: '100%' }}
+            className="object-none"
+          />
+        </div>
         <Header/>
-        <TitleCard pText="Matt's World" sText="I'm just living in it"/>
+        {/* <TitleCard pText="Matt's World" sText="I'm just living in it"/> */}
         <div className="flex justify-center">
          <div className="w-[90%] text-white pt-4 font-bold text-xl">Feed</div>
         </div>

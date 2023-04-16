@@ -10,7 +10,12 @@ type PostCardProps = {
     date: string;
   }
   
+
+    // class="font-black text-6xl block duration-500 relative transform transition-all translate-y-12 ease-out" 
+    // data-replace='{ "translate-y-12": "translate-y-0" }'
+
   const PostCard = (props: PostCardProps) => {
+
     return (
       <div className='w-[100%] mb-10  z-10 transition-all delay-50 hover:-translate-y-5 hover:scale-110 group/card cursor-pointer'>
         <div className="flex flex-col">

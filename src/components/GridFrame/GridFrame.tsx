@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { PageScroller } from "../PageScroller";
 
 type GridFrameProps = {
@@ -7,22 +7,18 @@ type GridFrameProps = {
 }
 const GridFrame = (props: GridFrameProps) => {
 
-    
-  const [pageNumber, setPageNumber] = useState(0);
   const ITEMS_PER_PAGE = 9
+  const [pageNumber, setPageNumber] = useState(0);
 
   const incrementPage = (event:any) =>{
     setPageNumber(pageNumber+1)
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });  }
+    window.scroll({top:0,behavior:'smooth'})
+  }
 
   const decrementPage = (event:any) =>{
     setPageNumber(pageNumber-1)
     window.scroll({top:0,behavior:'smooth'})
   }
-
 
   return (
     <div className="mt-10 flex flex-col items-center text-white">
