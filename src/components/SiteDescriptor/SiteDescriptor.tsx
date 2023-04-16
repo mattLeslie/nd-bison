@@ -9,7 +9,7 @@ const SiteDescriptor = () => {
                     <img 
                     alt="name" 
                     src="/assets/images/headshot.jpg" 
-                    className="object-fill h-[100%] rounded-full " 
+                    className="object-fill h-[100%] rounded-full border-2 border-slate-500" 
                     />
                 </div>
 
